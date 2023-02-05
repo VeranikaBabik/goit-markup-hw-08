@@ -1,0 +1,37 @@
+$colorTextDark: rgb(33, 33, 33);
+$colorTextLight: rgb(255, 255, 255, 1);
+$colorBgDark: rgb(47, 48, 58);
+$colorMark: rgb(33, 150, 243);
+$boxShadow: rgba(0, 0, 0, 0.15);
+$colorBorder: rgba(255, 255, 255, 0.3);
+$colorInputText: rgba(255, 255, 255, 0.6);
+$colorP: rgba(117, 117, 117, 1);
+$colorSocialLinks: rgba(175, 177, 184, 1);
+$colorSocialLinksBg: rgba(255, 255, 255, 0.1);
+$colorHeaderLine: rgba(236, 236, 236, 1);
+$colorBgModal: rgba(47, 48, 58, 0.4);
+$colorLogoDark: rgb(0, 0, 0);
+$colorIconStrength: rgba(245, 244, 250, 1);
+$colorOvText: rgba(47, 48, 58, 0.8);
+$colorBoxSh1: rgba(0, 0, 0, 0.12);
+$colorBoxSh2: rgba(0, 0, 0, 0.14);
+$colorBoxSh3: rgba(0, 0, 0, 0.2);
+$colorBtMdClose: rgba(0, 0, 0, 0.1);
+$colorInputForm: rgba(33, 33, 33, 0.2);
+$colorPlaceh: rgba(117, 117, 117, 0.5);
+$colorBgOverlay: rgba(33, 150, 243, 0.9);
+$colorBorderProject: rgba(238, 238, 238, 1);
+$mainFont: "Roboto", sans-serif;
+$secondaryFont: "Raleway", sans-serif;
+%button {
+  background-color: $colorMark;
+  color: $colorTextLight;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+@mixin transition($transition-property) {
+  transition: $transition-property;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+} ;

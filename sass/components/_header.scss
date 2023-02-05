@@ -1,0 +1,33 @@
+.main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-line {
+  border-bottom: 1px solid $colorHeaderLine;
+}
+.motto {
+  display: flex;
+  width: 1600px;
+  height: 600px;
+  background-color: linear-gradient ($colorBgModal 0%, $colorBgModal 100%);
+  background-image: url("../images/background-image.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  &__button {
+    @extend %button;
+    font-weight: 700;
+    line-height: 1.88;
+    margin: 30px 500px 200px 500px;
+    padding: 10px 41px;
+    width: 200px;
+  }
+}

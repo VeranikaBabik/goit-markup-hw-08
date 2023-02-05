@@ -1,0 +1,31 @@
+.contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 50px;
+  &__link {
+    text-decoration: none;
+    color: rgba(117, 117, 117, 1);
+    transition-property: fill, color;
+    @include transition(fill);
+    @include transition(color);
+    &:hover,
+    &:focus {
+      fill: $colorMark;
+      color: $colorMark;
+    }
+  }
+  &__item {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    fill: $colorP;
+    @include transition(fill);
+    @include transition(color);
+    &:hover,
+    &:focus {
+      fill: $colorMark;
+      color: $colorMark;
+    }
+  }
+}

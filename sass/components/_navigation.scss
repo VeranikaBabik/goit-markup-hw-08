@@ -1,0 +1,32 @@
+.navigation {
+  margin-left: 93px;
+  &__link:hover,
+  &__link:focus {
+    fill: $colorMark;
+    color: $colorMark;
+  }
+  &__link {
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include transition(fill);
+    @include transition(color);
+  }
+  &__link--active::after {
+    content: "";
+    position: absolute;
+    top: 76px;
+    background-image: url(../images/active.jpg);
+    width: 53px;
+    height: 4px;
+    border-radius: 2px;
+  }
+  &__list {
+    display: flex;
+    gap: 46px;
+    flex-basis: calc((100% - 2 * 46px) / 3);
+  }
+}

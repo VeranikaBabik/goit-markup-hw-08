@@ -1,0 +1,92 @@
+body {
+  font-family: $mainFont;
+  font-size: 16px;
+  font-weight: 400;
+}
+ul {
+  list-style-type: none;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 200px 0 0 0;
+  color: $colorTextLight;
+  line-height: 1.36;
+  text-align: center;
+  font-size: 44px;
+  font-weight: 900;
+}
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.17;
+  text-align: center;
+}
+h3 {
+  color: $colorTextDark;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.17;
+}
+p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: $colorP;
+}
+.container {
+  width: 1200px;
+  margin-left: 215px;
+  margin-right: 215px;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+  padding-bottom: 18px;
+  padding-top: 16px;
+  &__item {
+    display: flex;
+    fill: $colorSocialLinks;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    padding: 12px;
+    flex-basis: calc((100% - 3 * 10px) / 4);
+    @include transition(fill);
+    @include transition(background-color);
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      fill: $colorTextLight;
+      background-color: $colorMark;
+    }
+  }
+}
+.social-links__item--dark {
+  background-color: $colorSocialLinksBg;
+}
+.social-links--light {
+  background-color: inherit;
+  margin-left: 32px;
+  margin-right: 32px;
+}
+.social-link {
+  display: flex;
+  fill: $colorTextLight;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  border-radius: 50%;
+  flex-basis: calc((100% - 3 * 10px) / 4);
+  background-color: $colorSocialLinksBg;
+  @include transition(background-color);
+  @include transition(cursor);
+  @include transition(color);
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: $colorMark;
+  }
+}

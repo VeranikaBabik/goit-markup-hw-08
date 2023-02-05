@@ -1,0 +1,77 @@
+footer {
+  background-color: $colorBgDark;
+  color: $colorTextLight;
+  min-height: 252px;
+}
+address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 20px;
+}
+.social {
+  display: flex;
+  flex-direction: column;
+  width: 206px;
+  margin-left: 70px;
+  margin-top: 72px;
+  &__title {
+    color: $colorTextLight;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.17;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+  }
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  &__logo {
+    margin-top: 60px;
+  }
+}
+.newsletter {
+  margin-left: 94px;
+  &__input {
+    color: $colorInputText;
+    background-color: $colorBgDark;
+    width: 358px;
+    border: 1px solid $colorBorder;
+    box-shadow: 0px 4px 4px 0px $boxShadow;
+    border-radius: 4px;
+    min-height: 50px;
+    padding-left: 16px;
+  }
+  &__text {
+    text-transform: uppercase;
+    line-height: 1.17;
+    font-weight: 700;
+    font-size: 14px;
+    color: $colorTextLight;
+    margin: 72px 0 20px;
+  }
+  &__button-send {
+    fill: $colorTextLight;
+    margin-left: 24px;
+  }
+}
+.button-footer {
+  @extend %button;
+  background-color: $colorMark;
+  font-weight: 700;
+  line-height: 1.88;
+  color: $colorTextLight;
+  text-align: center;
+  width: 200px;
+  min-height: 50px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px $boxShadow;
+  margin-left: 12px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}

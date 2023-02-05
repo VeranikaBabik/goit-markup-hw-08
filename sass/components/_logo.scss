@@ -1,0 +1,15 @@
+.logo {
+  font-family: $secondaryFont;
+  font-size: 26px;
+  font-weight: 700;
+  text-decoration: none;
+  &__link-text {
+    color: $colorMark;
+  }
+}
+.logo--header {
+  color: $colorLogoDark;
+}
+.logo--footer {
+  color: $colorTextLight;
+}
