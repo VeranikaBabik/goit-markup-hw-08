@@ -1,0 +1,41 @@
+.direction {
+  display: none;
+  gap: 30px;
+  &__title {
+    padding: 94px 215px 0 215px;
+  }
+  &__img {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+  }
+  &__img li {
+    flex-basis: calc((100% - 2 * 30px) / 3);
+  }
+  &__overlay {
+    position: relative;
+  }
+  &__overlay-text {
+    position: absolute;
+    bottom: 0;
+    width: 370px;
+    height: 70px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.17;
+    color: $colorTextLight;
+    text-transform: uppercase;
+    background-color: $colorOvText;
+  }
+}
+@media (min-width: 1200px) {
+  .direction {
+    display: block;
+  }
+}

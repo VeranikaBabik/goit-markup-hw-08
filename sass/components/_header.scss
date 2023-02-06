@@ -4,7 +4,7 @@
   align-items: center;
 }
 .header {
-  height: 80px;
+  height: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -15,31 +15,61 @@
 }
 .motto {
   display: flex;
-  width: 1600px;
-  height: 600px;
+  width: 480px;
+  height: 400px;
   background-color: linear-gradient ($colorBgModal 0%, $colorBgModal 100%);
   background-image: url("../images/background-image.jpg");
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  &__text {
+    line-height: 1.62;
+    font-size: 26px;
+    margin: 118px 0 0 0;
+  }
   &__button {
     @extend %button;
     font-weight: 700;
     line-height: 1.88;
-    margin: 30px 500px 200px 500px;
+    margin: 30px 140px 118px 140px;
     padding: 10px 41px;
     width: 200px;
   }
 }
-@media (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .main-header {
     display: flex;
     justify-content: center;
   }
+  .header {
+    height: 80px;
+    width: 768px;
+  }
+  .motto {
+    width: 768px;
+    &__button {
+      margin: 30px 284px 118px 284px;
+    }
+  }
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .main-header {
     display: flex;
     justify-content: center;
+  }
+  .header {
+    height: 80px;
+  }
+  .motto {
+    width: 1600px;
+    height: 600px;
+    &__text {
+      line-height: 1.36;
+      font-size: 44px;
+      margin: 200px 0 0 0;
+    }
+    &__button {
+      margin: 30px 500px 200px 500px;
+    }
   }
 }

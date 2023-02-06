@@ -1,4 +1,4 @@
-.modal {
+.backdrop {
   background-color: $colorBoxSh3;
   position: fixed;
   top: 0;
@@ -11,24 +11,9 @@
   @include transition(visibility);
   @include transition(opacity);
   @include transition(transform);
-  &__close-button {
-    position: absolute;
-    right: 0;
-    width: 30px;
-    height: 30px;
-    margin: 17px 10px 553px 500px;
-    padding: 9px 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: $colorBtMdClose;
-    border-radius: 50%;
-    fill: $colorLogoDark;
-    cursor: pointer;
-  }
-  & > .backdrop {
-    height: 581px;
-    width: 528px;
+  & > .modal {
+    height: 609px;
+    width: 450px;
     border-radius: 4px;
     background-color: $colorTextLight;
     position: fixed;
@@ -39,6 +24,21 @@
       0px 2px 1px $colorBoxSh3;
     transform: translate(-50%, -50%);
   }
+}
+.modal__close-button {
+  position: absolute;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  margin: 17px 10px 553px 500px;
+  padding: 9px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: $colorBtMdClose;
+  border-radius: 50%;
+  fill: $colorLogoDark;
+  cursor: pointer;
 }
 .is-hidden {
   pointer-events: none;
@@ -82,7 +82,7 @@
     position: relative;
   }
   &__input {
-    width: 448px;
+    width: 370px;
     min-height: 40px;
     padding-left: 42px;
     border-radius: 4px;
@@ -106,7 +106,7 @@
   }
   &__input--comment {
     padding: 12px 16px;
-    width: 448px;
+    width: 370px;
     height: 120px;
     resize: none;
   }
@@ -134,7 +134,7 @@
   &__label {
     position: relative;
     color: $colorP;
-    font-size: 14px;
+    font-size: 12px;
   }
   &__label::before {
     display: block;
@@ -155,4 +155,19 @@
 }
 ::placeholder {
   color: $colorPlaceh;
+}
+@media (min-width: 768px) {
+  .backdrop > .modal {
+    height: 581px;
+    width: 528px;
+  }
+  .field__input {
+    width: 448px;
+  }
+  .field__input--comment {
+    width: 448px;
+  }
+  .agreement__label {
+    font-size: 14px;
+  }
 }

@@ -2,12 +2,12 @@
   display: none;
 }
 .contact {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 50px;
   &__link {
     text-decoration: none;
-    color: rgba(117, 117, 117, 1);
+    color: $colorP;
     transition-property: fill, color;
     @include transition(fill);
     @include transition(color);
@@ -32,12 +32,19 @@
     }
   }
 }
-@media (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .main-contact {
     display: flex;
   }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 0;
+  }
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .main-contact {
     display: inline-flex;
   }
