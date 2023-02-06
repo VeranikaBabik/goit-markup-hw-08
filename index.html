@@ -19,73 +19,6 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <div class="modal is-hidden" data-modal>
-      <div class="backdrop">
-        <button type="button" class="modal__close-button" data-modal-close>
-          <svg width="11" height="11">
-            <use href="./images/icons.svg#icon-close"></use>
-          </svg>
-        </button>
-        <div class="form">
-          <b class="form__title">Zostaw swoje dane w formularzu poniżej</b>
-          <form class="form__sign-up" name="sign-up-name">
-            <div class="field form__field">
-              <label class="field__label"
-                >Imie
-                <svg class="field__icon" width="12" height="12">
-                  <use href="./images/icons.svg#icon-person-send"></use>
-                </svg>
-                <input class="field__input" type="text" name="username"
-              /></label>
-            </div>
-            <div class="field form__field">
-              <label class="field__label"
-                >Telefon<svg class="field__icon" width="13" height="13">
-                  <use href="./images/icons.svg#icon-phone-send"></use>
-                </svg>
-                <input class="field__input" type="tel" name="userphone"
-              /></label>
-            </div>
-            <div class="field form__field">
-              <label class="field__label"
-                >Email<svg class="field__icon" width="15" height="12">
-                  <use href="./images/icons.svg#icon-email-send"></use>
-                </svg>
-                <input class="field__input" type="email" name="useremail"
-              /></label>
-            </div>
-            <div class="field form__field">
-              <label class="field__label"
-                >Komentarz<textarea
-                  class="field__input field__input--comment"
-                  type="text"
-                  placeholder="Wprowadź tekst"
-                  name="usercomment"
-                ></textarea>
-              </label>
-            </div>
-            <div class="agreement">
-              <input
-                class="agreement__field"
-                type="checkbox"
-                id="agreement"
-                name="useragreement"
-              />
-              <label class="agreement__label" for="agreement"
-                >Oświadczam iż akceptuję
-                <span class="agreement__label--statute">Regulamin</span> i
-                <span class="agreement__label--statute"
-                  >Politykę Prywatności.</span
-                >
-              </label>
-            </div>
-            <div>
-              <button class="agreement__button" type="submit">Wyślij</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
     <header>
       <div class="header-line">
         <section class="header container">
@@ -93,6 +26,15 @@
             <a class="logo logo--header" href="./index.html"
               ><span class="logo__link-text">Web</span>Studio</a
             >
+            <button
+              class="menu__button--open js-open-menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <svg height="40" width="40">
+                <use href="./images/icons.svg#icon-mob-menu"></use>
+              </svg>
+            </button>
             <nav class="navigation">
               <ul class="navigation__list">
                 <li>
@@ -111,7 +53,7 @@
               </ul>
             </nav>
           </div>
-          <div>
+          <div class="main-contact">
             <ul class="contact">
               <li class="contact__item">
                 <svg width="25" height="20">
@@ -458,6 +400,102 @@
         </div>
       </section>
     </footer>
+    <div class="modal is-hidden" data-modal>
+      <div class="backdrop">
+        <button type="button" class="modal__close-button" data-modal-close>
+          <svg width="11" height="11">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="form">
+          <b class="form__title">Zostaw swoje dane w formularzu poniżej</b>
+          <form class="form__sign-up" name="sign-up-name">
+            <div class="field form__field">
+              <label class="field__label"
+                >Imie
+                <svg class="field__icon" width="12" height="12">
+                  <use href="./images/icons.svg#icon-person-send"></use>
+                </svg>
+                <input class="field__input" type="text" name="username"
+              /></label>
+            </div>
+            <div class="field form__field">
+              <label class="field__label"
+                >Telefon<svg class="field__icon" width="13" height="13">
+                  <use href="./images/icons.svg#icon-phone-send"></use>
+                </svg>
+                <input class="field__input" type="tel" name="userphone"
+              /></label>
+            </div>
+            <div class="field form__field">
+              <label class="field__label"
+                >Email<svg class="field__icon" width="15" height="12">
+                  <use href="./images/icons.svg#icon-email-send"></use>
+                </svg>
+                <input class="field__input" type="email" name="useremail"
+              /></label>
+            </div>
+            <div class="field form__field">
+              <label class="field__label"
+                >Komentarz<textarea
+                  class="field__input field__input--comment"
+                  type="text"
+                  placeholder="Wprowadź tekst"
+                  name="usercomment"
+                ></textarea>
+              </label>
+            </div>
+            <div class="agreement">
+              <input
+                class="agreement__field"
+                type="checkbox"
+                id="agreement"
+                name="useragreement"
+              />
+              <label class="agreement__label" for="agreement"
+                >Oświadczam iż akceptuję
+                <span class="agreement__label--statute">Regulamin</span> i
+                <span class="agreement__label--statute"
+                  >Politykę Prywatności.</span
+                >
+              </label>
+            </div>
+            <div>
+              <button class="agreement__button" type="submit">Wyślij</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="menu js-menu-container is-open" id="mobile-menu">
+      <button class="menu__button--close js-close-menu">
+        <svg height="18.67" width="18.67">
+          <use href="./images/icons.svg#icon-mob-close"></use>
+        </svg>
+      </button>
+      <div class="menu__navigation--index">
+        <a class="menu__navigation--active" href="./index.html">Agencja</a>
+      </div>
+      <div class="menu__navigation--portfolio">
+        <a href="./portfolio.html">Portfolio</a>
+      </div>
+      <div class="menu__navigation--contact"><a href="">Kontakt</a></div>
+      <div class="menu__contact--tel">
+        <a href="tel:+48111111111">+48 111 111 111</a>
+      </div>
+      <div class="menu__contact--email">
+        <a href="mailto:info@devstudio.com"> info@devstudio.com</a>
+      </div>
+      <div class="menu__social">
+        <ul>
+          <ll>Instagram</ll>
+          <ll>Twitter</ll>
+          <ll>Facebook</ll>
+          <ll>LinkedIn</ll>
+        </ul>
+      </div>
+    </div>
+    <script defer src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -1,0 +1,131 @@
+.menu__button--close {
+  height: 18.67px;
+  width: 18.67px;
+  top: 11px;
+  right: 25.33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  &:hover,
+  &:focus {
+    fill: $colorMark;
+  }
+}
+.menu__button--open {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 15px;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    fill: $colorMark;
+  }
+}
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $colorTextLight;
+  z-index: 999;
+  &.is-open {
+    display: block;
+    transform: translateX(100%);
+  }
+}
+.menu__button--close {
+  cursor: pointer;
+  position: absolute;
+  top: 21px;
+  right: 26px;
+  fill: $colorTextDark;
+  &:hover,
+  &:focus {
+    fill: $colorMark;
+  }
+}
+.menu__navigation {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  margin-left: 40px;
+}
+.menu__navigation--index {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  margin-left: 40px;
+  margin-top: 48px;
+  margin-bottom: 36px;
+}
+.menu__navigation--active {
+  color: $colorMark;
+}
+.menu__navigation--portfolio {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  margin-left: 40px;
+  margin-bottom: 32px;
+  & a {
+    color: $colorTextDark;
+  }
+}
+.menu__navigation--contact {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  margin-left: 40px;
+  margin-bottom: 250px;
+  & a {
+    color: $colorTextDark;
+  }
+}
+.menu__contact--tel {
+  margin-left: 40px;
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 34px;
+  letter-spacing: 0.02em;
+  & a {
+    color: $colorMark;
+  }
+}
+.menu__contact--email {
+  margin-left: 40px;
+  margin-bottom: 64px;
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 0.02em;
+  & a {
+    color: $colorP;
+  }
+}
+.menu__social {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  color: $colorMark;
+}
+@media (min-width: 480px) {
+  .menu {
+    display: none;
+  }
+  .menu__button--open {
+    display: none;
+  }
+}

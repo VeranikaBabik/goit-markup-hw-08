@@ -1,3 +1,6 @@
+.main-contact {
+  display: none;
+}
 .contact {
   display: inline-flex;
   align-items: center;
@@ -27,5 +30,15 @@
       fill: $colorMark;
       color: $colorMark;
     }
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .main-contact {
+    display: flex;
+  }
+}
+@media (min-width: 768px) {
+  .main-contact {
+    display: inline-flex;
   }
 }

@@ -1,4 +1,5 @@
 .navigation {
+  display: none;
   margin-left: 93px;
   &__link:hover,
   &__link:focus {
@@ -28,5 +29,15 @@
     display: flex;
     gap: 46px;
     flex-basis: calc((100% - 2 * 46px) / 3);
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .navigation {
+    display: flex;
+  }
+}
+@media (min-width: 768px) {
+  .navigation {
+    display: flex;
   }
 }

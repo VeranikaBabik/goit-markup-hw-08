@@ -2,6 +2,13 @@ body {
   font-family: $mainFont;
   font-size: 16px;
   font-weight: 400;
+  min-width: 320px;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
 }
 ul {
   list-style-type: none;
@@ -35,9 +42,10 @@ p {
   color: $colorP;
 }
 .container {
-  width: 1200px;
-  margin-left: 215px;
-  margin-right: 215px;
+  min-width: 320px;
+  max-width: 1200px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 .social-links {
   display: flex;
@@ -88,5 +96,14 @@ p {
   &:focus {
     cursor: pointer;
     background-color: $colorMark;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+}
+@media (min-width: 768px) {
+  .container {
+    width: 1200px;
+    margin-left: 215px;
+    margin-right: 215px;
   }
 }
