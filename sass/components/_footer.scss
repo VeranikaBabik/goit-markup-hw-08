@@ -27,7 +27,6 @@ address {
 }
 .footer {
   display: flex;
-  flex-direction: column;
   align-items: center;
   &__logo {
     margin-top: 60px;
@@ -75,6 +74,11 @@ address {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 767px) {
+  .footer {
+    flex-direction: column;
+  }
+}
 @media (min-width: 768px) and (max-width: 1199px) {
   .footer {
     display: flex;
@@ -89,7 +93,6 @@ address {
 }
 @media (min-width: 1200px) {
   .footer {
-    display: flex;
     align-items: center;
     justify-content: flex-start;
     text-align: start;
